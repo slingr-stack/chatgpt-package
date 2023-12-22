@@ -1,63 +1,33 @@
 {
-    "name": "skeleton",
-    "label": "Skeleton Package",
+    "name": "chatgpt",
+    "label": "ChatGPT Package",
     "dependencies": [
         {
             "type": "service",
             "name": "http",
             "version": "v1.3.7",
             "instanceId": "shared"
-        },
-        {
-            "type": "package",
-            "name": "oauth",
-            "version": "v1.0.19"
         }
     ],
-    "configurationBuilder": "/configurationBuilder.js",
     "configuration": [
         {
-            "name": "SKELETON_API_BASE_URL",
-            "label": "Skeleton Api Url",
+            "name": "OPENAI_API_BASE_URL",
+            "label": "OpenAI Api Url",
             "type": "label",
-            "value": "https://example.com/"
+            "value": "https://api.openai.com"
         },
         {
-            "name": "choice",
-            "label": "Choice",
-            "required": false,
-            "defaultValue": "true",
-            "type": "buttonsGroup",
-            "typeOptions": {
-                "allowCustom": true,
-                "possibleValues": [
-                    {
-                        "label": "True",
-                        "name": "true"
-                    },
-                    {
-                        "label": "False",
-                        "name": "false"
-                    },
-                    {
-                        "label": "Other",
-                        "name": "other"
-                    }
-                ]
-            }
+            "name": "apiToken",
+            "label": "API Token",
+            "type": "password",
+            "visibility": "true",
+            "required": "true"
         },
         {
-            "name": "text",
-            "label": "Text",
+            "name": "organizationId",
+            "label": "Organization ID",
             "type": "text",
-            "required": "false",
-            "visibility": "config.choice == 'true'"
-        },
-        {
-            "name": "info",
-            "label": "info",
-            "type": "label",
-            "value": "'info'"
+            "visibility": "true"
         }
     ],
     "events": [
@@ -85,18 +55,23 @@
         },
         {
             "type": "flowStep",
-            "namespace": "apiCallSkeleton",
-            "path": "/flowSteps/apiCallSkeleton"
+            "namespace": "apiCallChatGPT",
+            "path": "/flowSteps/apiCallChatGPT"
         },
         {
             "type": "flowStep",
-            "namespace": "customFlow",
-            "path": "/flowSteps/customFlow"
+            "namespace": "chatChatgpt",
+            "path": "/flowSteps/chatChatgpt"
         },
         {
-            "type": "uiService",
-            "namespace": "testUiService",
-            "path": "/uiServices/testUiService"
+            "type": "flowStep",
+            "namespace": "completionsChatgpt",
+            "path": "/flowSteps/completionsChatgpt"
+        },
+        {
+            "type": "flowStep",
+            "namespace": "editChatgpt",
+            "path": "/flowSteps/editChatgpt"
         }
     ]
 }

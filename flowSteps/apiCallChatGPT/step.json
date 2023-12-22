@@ -1,8 +1,8 @@
 {
-	"label": "API call to skeleton",
-	"name": "apiCallSkeleton",
+	"label": "API call to chat gpt",
+	"name": "apiCallChatGPT",
 	"category": "integrations",
-	"description": "This flow step will send generic request to skeleton.",
+	"description": "This flow step will send generic request to chat gpt.",
 	"inputs": [
 		{
 			"label": "Method",
