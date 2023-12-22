@@ -17,7 +17,7 @@
 
 ## Overview
 
-The ChatGPT endpoint has the following features:
+The ChatGPT package has the following features:
 
 - Authorization with API Token
 
@@ -27,7 +27,7 @@ Please make sure you take a look at the documentation from ChatGPT as features a
 
 ## Quick start
 
-Once you configured the endpoint, you can list current models with this call:
+Once you configured the package, you can list current models with this call:
 
 ```js
 for(var model of pkg.chatgpt.api.get("/models").data)
@@ -51,7 +51,7 @@ var res = pkg.chatgpt.api.post("/completions", {
 Before configuring the package you will need to create an account in OpenAI:
 [OpenAI login](https://platform.openai.com/signup?launch)
 
-Once you have your account you will be able to configure the endpoint.
+Once you have your account you will be able to configure the package.
 
 ### API Token
 
@@ -72,9 +72,9 @@ The Javascript API of the chatgpt package has two pieces:
 ## HTTP requests
 You can make `GET`,`PUT`,`PATCH`,`DELETE` requests to the [chatgpt API](https://platform.openai.com/docs/introduction) like this:
 ```javascript
-var response = pkg.skeleton.api.get('/v1/models')
-var response = pkg.skeleton.api.post('/v1/edits', body)
-var response = pkg.skeleton.api.post('/v1/edits')
+var response = pkg.chatgpt.api.get('/v1/models')
+var response = pkg.chatgpt.api.post('/v1/edits', body)
+var response = pkg.chatgpt.api.post('/v1/edits')
 ```
 
 Please take a look at the documentation of the [HTTP service](https://github.com/slingr-stack/http-service)
@@ -82,7 +82,7 @@ for more information about generic requests.
 
 ## Flow Step
 
-As an alternative option to using scripts, you can make use of Flows and Flow Steps specifically created for the endpoint:
+As an alternative option to using scripts, you can make use of Flows and Flow Steps specifically created for the package:
 <details>
     <summary>Click here to see the Flow Steps</summary>
 
@@ -90,7 +90,7 @@ As an alternative option to using scripts, you can make use of Flows and Flow St
 
 ### Generic Flow Step
 
-Generic flow step for full use of the entire endpoint and its services.
+Generic flow step for full use of the entire package and its services.
 
 <h3>Inputs</h3>
 
@@ -113,7 +113,7 @@ Generic flow step for full use of the entire endpoint and its services.
         <td> - </td>
         <td>Always</td>
         <td>
-            This is the http method to be used against the endpoint. <br>
+            This is the http method to be used against the package. <br>
             Possible values are: <br>
             <i><strong>GET,PUT,PATCH,DELETE</strong></i>
         </td>
@@ -125,7 +125,7 @@ Generic flow step for full use of the entire endpoint and its services.
         <td> - </td>
         <td>Always</td>
         <td>
-            The url to which this endpoint will send the request. This is the exact service to which the http request will be made. <br>
+            The url to which this package will send the request. This is the exact service to which the http request will be made. <br>
             Possible values are: <br>
             <i><strong>/testPath<br>/path3<br>/path1/{testPath}<br>/path2?param2=' + httpOptions.query.param2 + '&param3=' + httpOptions.query.param3 + '<br>/path4<br></strong></i>
         </td>
@@ -234,7 +234,7 @@ Generic flow step for full use of the entire endpoint and its services.
         <td>response</td>
         <td>object</td>
         <td>
-            Object resulting from the response to the endpoint call.
+            Object resulting from the response to the package call.
         </td>
     </tr>
     </tbody>
@@ -394,7 +394,7 @@ This flow step is used to get a chat completion for a prompt with messages.
         <td>response</td>
         <td>object</td>
         <td>
-            Object resulting from the response to the endpoint call.
+            Object resulting from the response to the package call.
         </td>
     </tr>
     </tbody>
@@ -547,7 +547,7 @@ This flow step is used to get a completion for a prompt.
         <td>response</td>
         <td>object</td>
         <td>
-            Object resulting from the response to the endpoint call.
+            Object resulting from the response to the package call.
         </td>
     </tr>
     </tbody>
@@ -700,13 +700,11 @@ This flow step is used to get an edit for a prompt and an instruction.
         <td>response</td>
         <td>object</td>
         <td>
-            Object resulting from the response to the endpoint call.
+            Object resulting from the response to the package call.
         </td>
     </tr>
     </tbody>
 </table>
-
-
 
 </details>
 
@@ -723,4 +721,4 @@ SLINGR is a low-code rapid application development platform that accelerates dev
 
 ## License
 
-This endpoint is licensed under the Apache License 2.0. See the `LICENSE` file for more details.
+This package is licensed under the Apache License 2.0. See the `LICENSE` file for more details.

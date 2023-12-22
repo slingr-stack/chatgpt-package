@@ -2,7 +2,7 @@
 	"label": "Create a chat with ChatGPT",
 	"name": "chatChatgpt",
 	"category": "integrations",
-	"description": "This flow step will create a chat with chatgpt endpoint.",
+	"description": "This flow step will create a chat with chatgpt package.",
 	"inputs": [
 		{
 			"label": "Model",

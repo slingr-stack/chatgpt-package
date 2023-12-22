@@ -2,7 +2,7 @@
 	"label": "Create an edit with ChatGPT",
 	"name": "editChatgpt",
 	"category": "integrations",
-	"description": "This flow step will create an edit with chatgpt endpoint.",
+	"description": "This flow step will create an edit with chatgpt package.",
 	"inputs": [
 		{
 			"label": "Model",

@@ -2,7 +2,7 @@
 	"label": "Create a completion with ChatGPT",
 	"name": "completionsChatgpt",
 	"category": "integrations",
-	"description": "This flow step will create a completion with chatgpt endpoint.",
+	"description": "This flow step will create a completion with chatgpt package.",
 	"inputs": [
 		{
 			"label": "Model",
