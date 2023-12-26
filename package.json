@@ -14,7 +14,7 @@
             "name": "OPENAI_API_BASE_URL",
             "label": "OpenAI Api Url",
             "type": "label",
-            "value": "https://api.openai.com"
+            "value": "https://api.openai.com/v1"
         },
         {
             "name": "apiToken",
