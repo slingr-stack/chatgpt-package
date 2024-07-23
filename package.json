@@ -5,7 +5,7 @@
         {
             "type": "service",
             "name": "http",
-            "version": "v1.3.7",
+            "version": "v1.6.7",
             "instanceId": "shared"
         }
     ],
@@ -52,26 +52,6 @@
             "type": "listener",
             "namespace": "webhook",
             "path": "/listeners/webhook.js"
-        },
-        {
-            "type": "flowStep",
-            "namespace": "apiCallChatGPT",
-            "path": "/flowSteps/apiCallChatGPT"
-        },
-        {
-            "type": "flowStep",
-            "namespace": "chatChatgpt",
-            "path": "/flowSteps/chatChatgpt"
-        },
-        {
-            "type": "flowStep",
-            "namespace": "completionsChatgpt",
-            "path": "/flowSteps/completionsChatgpt"
-        },
-        {
-            "type": "flowStep",
-            "namespace": "editChatgpt",
-            "path": "/flowSteps/editChatgpt"
         }
     ]
 }
